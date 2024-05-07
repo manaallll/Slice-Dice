@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+ <title>Slice & Dice - Menu</title>
+</head>
+<style>
+body {
+ margin: 0;
+ padding: 0;
+ background-color:#fee6c8;
+ font-family: Arial, sans-serif;
+
+}
+
+header {
+ display: flex;
+ padding: 20px;
+ align-items: center;
+ background-color:#fee6c8 ; 
+ justify-content: space-between;
+ box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+h2{
+ color:black;
+
+}
+
+.logo img {
+  width: 90px; 
+  float: left;
+  
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+}
+
+nav li {
+ margin-right: 20px;
+ display: inline-block;
+  
+}
+nav ul {
+display: inline-block;
+}
+
+nav a {
+ color:black;
+ font-weight: bold;
+ padding: 10px 20px;
+ text-decoration: none;
+ 
+}
+
+nav a:hover {
+ background-color: #ffb66b;
+ 
+}
+
+
+main {
+ padding: 50px;
+ 
+}
+
+footer {
+ padding: 20px;
+ text-align: center;
+ background-color: rgb(255,214,176);
+ 
+}
+.home{
+padding:0 7vw;
+background-color:#fed8b1;
+
+}
+.main_slide{
+display:flex;
+align-items:center;
+flex-wrap:wrap-reverse;
+}
+.main_slide div:nth-child(2){<!--image-->
+flex:1;
+display:flex;
+justify-content:center;
+padding-top:40px;
+}
+.main_slide div:nth-child(1){<!-- the p and h1 and button-->
+color:white;
+padding-top:20px;
+flex:1;
+font-size:30px;
+font-family:arial;
+}
+.main_slide div:nth-child(1) p{
+font-size:20px;
+padding:20px 0;
+color:black;;
+font-weight:bold;
+}
+.main_slide div:nth-child(1) span{
+ color:#ffb66b;
+ text-decoration:underline;
+ text-undeline-offset:10px;
+ text-decoration-color:rgb(253,176,34);
+
+}
+.red_btn{
+ width:160px;
+ color:white;
+ cursor:pointer;
+ margin-top:20px;
+ font-weight:bold;
+ line-height:50px;
+ border-radius:10px;
+ transition:all 0.2s;
+ background-color:#ffb66b;
+ border:1px solid #ffb66b;
+ box-shadow:0 10px 15px rgb(253,176,34);
+
+}
+
+.red_btn:hover{
+color:#ffb66b;
+background-color:white;
+border:1px solid #ffb66b;
+box-shadow:0 2px 15px #ffb66b;
+
+}
+.main_slide3{
+ width:100%;
+ z-index:1;
+ display:flex;
+ position:relative;
+ align-items:center;
+ flex-direction:column;
+
+}
+
+.main_slide3 .fav-head{
+ width:450px;
+ text-align:center;
+ margin-bottom:10px;
+
+}
+
+.main_slide3 .fav-head h3{
+ color:black;
+ font-size:30px;
+ padding:20px 0;
+ margin-top:0;
+
+}
+
+.main_slide3 .fav-food{
+ width:90%;
+ display:flex;
+ margin:30px 0;
+ flex-wrap:wrap;
+ justify-content:space-evenly;
+
+}
+
+.main_slide3 .fav-food .items{
+ width:220px;
+ padding:15px;
+ cursor:pointer;
+ font-weight:bold;
+ padding-top:20px;
+ text-align:center;
+ border-radius:10px;
+ margin-bottom:10px;
+ background-color:#ffb66b;
+ box-shadow:0 2px 10px rgba(119,119,119,0.438);
+
+}
+
+.main_slide3 .fav-food .items div{
+ height:160px;
+ margin-bottom:15px;
+
+}
+
+.main_slide3 .fav-food .items img{
+ width:160px;
+ margin-bottom:15px;
+
+}
+
+.main_slide3 .price{
+ color:red;
+ font-size:15px;
+ font-weight:bold;
+ 
+}
+
+.main_slide3 .dsgn{
+ bottom:0;
+ height:50%;
+ width:100%;
+ z-index:-1;
+ position:absolute;
+ background-color:rgb(255,214,176);
+
+}
+
+.food-items{
+ display:flex;
+ margin:70px 0;
+ padding:20px 0;
+ flex-wrap=wrap;
+ border-radius:30px;
+ background-color:#ffb66b;
+ justify-content:space-around;
+ 
+ }
+ 
+.items{
+ width:250px;
+ padding:30px;
+ text-align:center;
+ 
+ }
+ 
+.items div{
+ height:160px;
+ 
+ }
+.items img{
+width:160px;
+margin-bottom:15px;
+
+}
+
+.items p{
+font-size:15px;
+margin-top:15px;
+margin-bottom:10px;
+font-weight:bold;
+} 
+
+.items .white_btn{
+width:120px;
+line-height:35px;
+
+}
+
+.white_btn{
+cursor:pinter;
+margin-top:20px;
+width:1600px;
+font-weight:bold;
+line-height:50px;
+color:rgb(253,77,8);
+border:1px solid rgb(253,77,8);
+background-color:rgb(255,214,176);
+border-radius:10px;
+box-shadow:0 2px 15px rgb(250,120,60);
+transition:all 0.2s;
+height:53px;
+
+}
+
+.white_btn:hover{
+color:white;
+background-color:rgb(253,77,8);
+box-shadow:0 10px 15px rbg(250,120,69);
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+.feedback{
+max-width:1200px;
+margin:auto;
+padding:1rem;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10rem;
+}
+.feedback_left h1{
+margin-bottom:2rem;
+font-size:2.5rem;
+font-weight:500;
+color:orange;
+font-weight:bold;
+}
+.feedback_left p{
+color:black;
+margin-bottom:1rem;
+font-weight:bold;
+}
+.feedback_left button{
+padding:1re 2rem;
+margin-top:1rem;
+outline:none;
+border:none;
+border-radius:5px
+background:white;
+color:black;
+font-size:1rem;
+cursor:pointer;
+font-weight:bold;
+
+}
+
+.feedback_right{
+display:grid;
+gap:2rem;
+}
+
+.card{
+padding:2rem;
+display:flex;
+align-items:flex-start;
+gap:2rem;
+background-color:#ffb66b;
+border-radius:1rem;
+box-shadow:5px 5px 20px black;
+cursor:pointer;
+}
+.card img{
+max-width:75px;
+border-radius:100%;
+}
+.card_content{
+display:flex;
+gap:1rem;
+}
+.card_content span i{
+font-size:2rem;
+color:black;
+}
+.card_details p{
+font-style:italic;
+color:black;
+margin-bottom:1rem;
+}
+.card_details h4{
+text-align:right;
+color:red;
+font-size:1rem;
+font-weight:bold;
+
+</style>
+<body>
+  <header>
+ 
+  
+    <div class="container">
+	
+      <div class="logo">
+        <img src="C:\Users\user\Downloads\vecteezy_ai-generated-isolated-tomato-sauce-drip-art_41302674.png" >
+      
+    </div>
+	<div class="text">
+	<h2>Slice & Dice</h2>
+	</div>
+	</div>
+    <nav>
+      <ul>
+        <li><a href="WEBMENUFINAL.html">Home</a></li>
+		<li><a href="aboutus.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Contact Us</a></li>
+		<li><a href="#">Book Table</a></li>
+      </ul>
+	  
+    </nav>
+
+	
+  </header>
+  
+  
+  
+  <div class="home">
+  <div class="main_slide">
+  <div>
+<h2>Your happy place is a slice away.<span> Welcome to Slice & Dice!</span></h2>
+<p>At Slice & Dice, we believe pizza is more than just a meal; it's an experience. We craft every pizza with fresh, high-quality ingredients, ensuring a taste explosion in every bite. Whether you're a classic cheese lover, a veggie enthusiast, or a meat-aholic, our menu offers something to satisfy every craving.</p>
+<button class="red_btn">Visit Now</button>
+
+</div>
+<div>
+<img src="C:\Users\user\OneDrive\Desktop\feet\vecteezy_pizza-pizza-pizza-with-transparent-background_24725147.png">
+</div>
+</div>
+</div>
+<div class="food-items">
+
+<div class="items">
+<div>
+
+<img src="C:\Users\user\Downloads\vecteezy_pepperoni-pizza-isolated-illustration_23742417.png">
+</div>
+<h3>Pizza</h3>
+<p>Life is too short for boring pizza. Discover your perfect slice here.</p>
+<button class="white_btn">See Menu</button>
+</div>
+<div class="items">
+<div>
+
+<img src="C:\Users\user\Downloads\vecteezy_ai-generated-french-fries-potatoes-in-paper-cup-isolated-on_36625209.png">
+</div>
+<h3>Fries</h3>
+<p>Elevate your meal with a side of our crispy, satisfying fries.</p>
+<button class="white_btn">See Menu</button>
+</div>
+<div class="items">
+<div>
+
+<img src="C:\Users\user\Downloads\vecteezy_glass-of-cola-with-ice-on-a-transparent-background_27291657.png"">
+</div>
+<h3>Drinks</h3>
+<p>Enjoy the taste of your favorite soft drinks alongside your pizza.</p>
+<button class="white_btn">See Menu</button>
+</div>
+
+</div>
+</div>
+
+<div class="main_slide3">
+<div class="fav-head">
+<h3>Must-Trys</h3>
+
+</div>
+<div class="fav-food">
+<div class="dsgn"></div>
+
+<div class="items">
+<div>
+<img src="C:\Users\user\Downloads\pizza-png-19323.png">
+</div>
+<h3>Veggie Delight </h3>
+<p>Fresh peppers, mushrooms, artichokes, and briny black olives join forces with melty cheese.</p>
+<p class="price">$10.90</p>
+</div>
+<div class="items">
+<div>
+<img src="C:\Users\user\Downloads\vecteezy_top-view-pizza-with_24586193.png">
+</div>
+<h3>Prawn Primavera </h3>
+<p>Freshly caught prawns and crisp seasonal vegetables create a vibrant flavor explosion on every bite.</p>
+<p class="price">$15.90</p>
+</div>
+<div class="items">
+<div>
+<img src="C:\Users\user\Downloads\pizza-png-19335.png">
+</div>
+<h3>B.M.C.</h3>
+<p>Experience a perfect balance of smoky bacon and earthy mushrooms with our flavorful tomato sauce and cheese. </p>
+<p class="price">$14.25</p>
+</div>
+<div class="items">
+<div>
+<img src="C:\Users\user\Downloads\vecteezy_top-view-pizza-with_24589238.png">
+</div>
+<h3>Tropical Twist</h3>
+<p>Take a bite and discover the delightful harmony of juicy ham and sweet pineapple on our signature crust.</p>
+<p class="price">$12.50</p>
+</div>
+</div>
+</div>
+<div class="feedback"></div>
+<div class="feedback_left">
+<h1>Discover what keeps our customers coming back for more!</h1>
+<p>Over 10,000 satisfied customers have joined the Slice & Dice family since we opened!</p>
+<p>Your feedback is guiding us towards bigger and better things. We can't wait to unveil an exciting new customer-inspired project!</p>
+ <button>Read Feedbacks</button>
+ </div>
+ <div class="feedback_right">
+ <div class="card">
+ <img src="C:\Users\user\OneDrive\Desktop\menu\images\D8dDZukXUAAXLdY.jpg">
+ <div class="card_content">
+ <span><i class="ri-double-quotes-l"></i></span>
+ <div class="card_details">
+ <p>5 stars! This place is a hidden gem! The pizza is incredible, and the service is fantastic. We will definitely be back!</p>
+ <h4>-Sarah</h4>
+ </div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="C:\Users\user\Downloads\WhatsApp Image 2024-05-01 at 5.49.16 PM.jpeg">
+ <div class="card_content">
+ <span><i class="ri-double-quotes-l"></i></span>
+ <div class="card_details">
+ <p>This is our go-to spot for pizza night! The atmosphere is family-friendly, and the prices are very affordable.</p>
+ <h4>-Emilio</h4>
+ </div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="C:\Users\user\OneDrive\Desktop\menu\images\8e77522b-1032-474b-bc7b-ef54c61e4a91.jpeg">
+ <div class="card_content">
+ <span><i class="ri-double-quotes-l"></i></span>
+ <div class="card_details">
+ <p>Garlic Groove was the best pizza I've ever had! The crust is perfect, the sauce is delicious, and the toppings are fresh and flavorful.</p>
+ <h4>-Christia</h4>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ 
+ <main>
+    
+  </main>
+<footer>
+    <p>&copy; Slice & Dice - All Rights Reserved</p>
+  </footer>
+  
+
+</body>
+</html>
